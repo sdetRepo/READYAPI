@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="b8b1f5ec-4d50-4240-a7da-d1e6b166c4fe" name="End2End Automation" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b8b1f5ec-4d50-4240-a7da-d1e6b166c4fefileName">End2End-Automation</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

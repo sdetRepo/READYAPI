@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Users" path="/jpa/users" id="642b2931-c08f-4643-9beb-d3661af91859" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="642b2931-c08f-4643-9beb-d3661af91859fileName">Users</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Users" id="ca9ee270-452a-4037-afc7-59770de08d58" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:user="http://tekschool-test-env.herokuapp.com/jpa/users">user:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="097f44ff-41f0-4b13-9b70-464b96a483ed" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://tekschool-test-env.herokuapp.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

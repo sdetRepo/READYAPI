@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b5b9c5f2-3a69-4d0f-a90a-9b3496f71833" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DeletePrimaryUser" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b5b9c5f2-3a69-4d0f-a90a-9b3496f71833fileName">DeletePrimaryUser</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="0d38177a-dbbd-45a2-ace7-1ee5efd5ca7e">
+    <con:settings/>
+    <con:config service="DeleteUserByParam" resourcePath="/jpa/users/byParam" methodName="ByParam" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="fc5474cb-e48a-41a3-88aa-10abdf5ecece" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://tekschool-test-env.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://tekschool-test-env.herokuapp.com/jpa/users/byParam</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0934980f-14e5-4c1a-9f74-9cc5ec658251" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e12aaf8e-80f7-4b08-8874-400ef669cf46" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${#[End2End Automation#GetPrimaryCustomer#REST Request]#Response#$['id']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 2" id="19b29396-5059-494f-a3fa-6c4e827e9a9b">
+    <con:settings/>
+    <con:config service="GetUserByParam" resourcePath="/jpa/users/byparam" methodName="Byparam" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request 2" id="c0696281-70c7-41a9-ab20-95a1f06397e7" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://tekschool-test-env.herokuapp.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://tekschool-test-env.herokuapp.com/jpa/users/byparam</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="dca8f1a0-29af-4bdd-8540-9db74b793ea6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c69d92a5-63d9-403d-adf3-2605cdb9e4d7" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${REST Request#Response#$['id']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
