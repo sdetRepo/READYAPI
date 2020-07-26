@@ -10,8 +10,8 @@
       <con:dataSource type="Data Generator">
         <con:configuration>
           <generatedDataCount>10</generatedDataCount>
-          <generatorsTotalNumber>10</generatorsTotalNumber>
-          <lastSelectedProperty>9</lastSelectedProperty>
+          <generatorsTotalNumber>11</generatorsTotalNumber>
+          <lastSelectedProperty>10</lastSelectedProperty>
           <GeneratorType0>NAME</GeneratorType0>
           <PropertyName0>firstName</PropertyName0>
           <repetitionCountfirstName>0</repetitionCountfirstName>
@@ -94,6 +94,11 @@
           <ValueFromSetStringsMaritalStatus>Married</ValueFromSetStringsMaritalStatus>
           <ValueFromSetStringsMaritalStatus>Divorced</ValueFromSetStringsMaritalStatus>
           <ValueFromSetStringsMaritalStatus/>
+          <GeneratorType10>BOOL</GeneratorType10>
+          <PropertyName10>TestProperty</PropertyName10>
+          <repetitionCountTestProperty>0</repetitionCountTestProperty>
+          <repeatValuesTestProperty>false</repeatValuesTestProperty>
+          <boolViewTestProperty>Classic</boolViewTestProperty>
           <escapeSpaceSequence>c4dd290e47fa42868694fc2cf6e7524d</escapeSpaceSequence>
         </con:configuration>
       </con:dataSource>
@@ -109,6 +114,7 @@
       <con:property>Employment Status</con:property>
       <con:property>DOB</con:property>
       <con:property>MaritalStatus</con:property>
+      <con:property>TestProperty</con:property>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
